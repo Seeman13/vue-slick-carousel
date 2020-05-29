@@ -53,6 +53,7 @@ const getSlideStyle = spec => {
 
   if (spec.fade) {
     style.position = 'relative'
+    style.zIndex = spec.currentSlide === spec.index ? 999 : 998
     if (spec.vertical) {
       style.top = `${-spec.index * parseInt(spec.slideHeight)}px`
     } else {
