@@ -182,7 +182,7 @@ export const filterUndefinedOrNull = props =>
     }, {})
 
 export const swipeStart = (e, swipe, draggable) => {
-  e.target.tagName === 'IMG' && e.preventDefault()
+  e.target.tagName === 'IMG'
   if (!swipe || (!draggable && e.type.indexOf('mouse') !== -1)) return ''
   return {
     dragging: true,
